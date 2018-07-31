@@ -1,13 +1,4 @@
-/***
-
-This example builds on skills to pull data from CSVs, which is covered in other exercises. 
-
-Examples of other kinds of bubble maps are available here: https://plot.ly/javascript/bubble-maps/
-
-Data from https://github.com/fivethirtyeight/data/tree/master/hate-crimes
-
-***/
-
+// MAP 
 Plotly.d3.csv('CoA_publicart.csv', function(err, rows){
      
       function unpack(rows, key) {
