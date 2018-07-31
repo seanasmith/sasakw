@@ -50,5 +50,6 @@ nav ul li a:hover {
 }
 
 #mapviz {
- max 
+ max-width: 2000px; 
+  align: center;
 }
