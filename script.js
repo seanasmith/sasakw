@@ -53,7 +53,7 @@ Plotly.d3.csv('/CoA_publicart.csv', function(err, rows){
         mapboxAccessToken: 'pk.eyJ1IjoiYWxleGFuZHJhd2hpdGUiLCJhIjoiY2pmbHVxdmVhMHMyZjJ4bGk1eHdidDVjMCJ9.Bm90pkulu8KqsBfgDBO7lA' // Get your own Mapbox access token by registering at mapbox.com
       });
 
-      Plotly.plot('viz', data, layout);
+      Plotly.plot('mapviz', data, layout);
 });
 
 
