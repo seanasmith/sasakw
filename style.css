@@ -6,13 +6,19 @@ body {
 }
 
 .container {
-  margin-top: 50px;
+  margin-top: 40px;
 }
 
 h1 {
   font-style: italic;
   color: #373fff;
 }
+
+/*
+
+    Header and Nav
+
+*/
 
 header {
   background-color: #000;
@@ -49,7 +55,38 @@ nav ul li a:hover {
   color: #f00;
 }
 
+/*
+
+  MAP
+
+*/
+
 #mapviz {
  max-width: 2000px; 
   align: center;
+}
+
+/*
+
+  TOP SECTION
+
+*/
+
+#top {
+  background-color: #cdcdcd;
+  height: 100vh;
+}
+
+#intro {
+  height: 100vh;
+  background-color: #eeeeee;
+}
+
+#artists {
+  height: 100vh;
+  background-color: #ababab;
+} 
+
+#art {
+  height: 100vh;
 }
