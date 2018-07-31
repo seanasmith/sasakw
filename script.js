@@ -8,7 +8,7 @@ Data from https://github.com/fivethirtyeight/data/tree/master/hate-crimes
 
 ***/
 
-Plotly.d3.csv('/CoA_publicart.csv', function(err, rows){
+Plotly.d3.csv('CoA_publicart.csv', function(err, rows){
      
       function unpack(rows, key) {
           return rows.map(function(row) { return row[key]; });
@@ -19,6 +19,9 @@ Plotly.d3.csv('/CoA_publicart.csv', function(err, rows){
           lat: unpack(rows, 'Location Latitude'),
           lon: unpack(rows, 'Location Longitude'),
           text: unpack(rows,'Artwork Title'),
+        marker: {
+            color: '#F00'
+          }
       }];
   
 
