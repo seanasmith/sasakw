@@ -60,3 +60,30 @@ Plotly.d3.csv('CoA_publicart.csv', function(err, rows){
 });
 
 
+/*
+
+  Smooth scroll 
+
+*/
+
+
+$(document).ready(function(){
+  // Add smooth scrolling to all links
+  $("header nav ul li a").on('click', function(event) {
+
+    // clicked hash link should have value
+    if (this.hash !== "") {
+      // Prevent default link click behavior
+      event.preventDefault();
+
+      // get hash value
+      var hash = this.hash;
+
+      // animate for smooth scroll to clicked link
+      $('html, body').animate({
+        scrollTop: $(hash).offset().top
+      }, 1000, function(){
+      });
+    } // End if
+  });
+});
