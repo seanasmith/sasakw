@@ -18,13 +18,13 @@ Plotly.d3.csv('/CoA_publicart.csv', function(err, rows){
           type: 'scattermapbox',
           lat: unpack(rows, 'Location Latitude'),
           lon: unpack(rows, 'Location Longitude'),
-          text: unpack(rows,'FoundLocation'),
+          text: unpack(rows,'Artwork Title'),
       }];
   
 
 
       var layout = {
-       title: 'Pitbull Hot Spots',
+       title: 'Public Art in Austin, Texas',
        font: {
          color: '#222'
        },

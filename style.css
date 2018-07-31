@@ -1,8 +1,12 @@
 /* CSS files add styling rules to your content */
 
 body {
-  font-family: "Benton Sans", "Helvetica Neue", helvetica, arial, sans-serif;
-  margin: 2em;
+  font-family: "Helvetica Neue", helvetica, arial, sans-serif;
+  margin: 0;
+}
+
+.container {
+  margin-top: 50px;
 }
 
 h1 {
@@ -12,8 +16,39 @@ h1 {
 
 header {
   background-color: #000;
+  height: 40px;
+  position: fixed;
+  top: 0;
+  width: 100vw;
+}
+
+nav {
+  text-align: right;
+}
+
+nav ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+nav ul li {
+  display: inline;
+  padding: 1%;
 }
 
 nav ul li a {
-
+  color: #FFF;
+  text-decoration: none;
 }
+
+nav ul li a:hover {
+  color: #f00;
+}
+
+#viz {
+  height: 500px;
+  width: 600px;
+  padding: 10px;
+  margin: 40px;
+  border: 1px solid #ccc;
+}  
