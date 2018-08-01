@@ -9,11 +9,6 @@ body {
   margin-top: 40px;
 }
 
-h1 {
-  font-style: italic;
-  color: #373fff;
-}
-
 /*
 
     Header and Nav
@@ -63,7 +58,6 @@ nav ul li a:hover {
 
 #mapviz {
  max-width: 2000px; 
-  align: center;
 }
 
 /*
@@ -76,6 +70,23 @@ nav ul li a:hover {
   background-image: url(https://cdn.glitch.com/76b5de22-574e-436a-b573-9655690c67f8%2Ftexas-3409985_1280.jpg?1533088282665);
   height: 100vh;
 }
+
+h1 {
+  color: #FFF;
+  font-size: 6rem;
+  margin: 0;
+}
+
+h3 {
+  color: #FFF;
+  font-size: 2rem;
+  margin-top: 0;
+}
+
+
+
+
+
 
 #intro {
   height: 100vh;
