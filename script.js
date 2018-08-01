@@ -1,4 +1,5 @@
 // MAP 
+
 Plotly.d3.csv('CoA_publicart.csv', function(err, rows){
      
       function unpack(rows, key) {
@@ -15,8 +16,6 @@ Plotly.d3.csv('CoA_publicart.csv', function(err, rows){
           }
       }];
   
-
-
       var layout = {
        title: 'Public Art in Austin, Texas',
        font: {
