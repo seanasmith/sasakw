@@ -69,6 +69,10 @@ nav ul li a:hover {
 #top {
   background-image: url(https://cdn.glitch.com/76b5de22-574e-436a-b573-9655690c67f8%2Ftexas-3409985_1280.jpg?1533088282665);
   height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
 }
 
 h1 {
@@ -78,20 +82,35 @@ h1 {
 }
 
 h3 {
+  clear: both;
   color: #FFF;
   font-size: 2rem;
-  margin-top: 0;
 }
 
+/*
 
+    Intro section
 
-
-
+*/
 
 #intro {
   height: 100vh;
-  background-color: #eeeeee;
 }
+
+#intro p#lead-graph {
+  margin-top: 15%;
+}
+
+#intro p {
+  width: 60%;
+  margin: auto;
+}
+
+
+
+
+
+
 
 #artists {
   height: 100vh;
