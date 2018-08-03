@@ -1,6 +1,6 @@
 // MAP 
 
-Plotly.d3.csv('CoA_publicart.csv', function(err, rows){
+/*Plotly.d3.csv('CoA_publicart.csv', function(err, rows){
      
       function unpack(rows, key) {
           return rows.map(function(row) { return row[key]; });
@@ -47,7 +47,7 @@ Plotly.d3.csv('CoA_publicart.csv', function(err, rows){
       });
 
       Plotly.plot('mapviz', data, layout);
-});
+});*/
 
 
 /*
@@ -81,20 +81,18 @@ $(document).ready(function(){
 // Filter list
 
 
-    data2 = JSON.parse(data);
+    data = JSON.parse(data);
     document.getElementById("form1").onchange = function() {
     j=0;
 
-    month = document.getElementById("thedropdown").value;
+    zip = document.getElementById("thedropdown").value;
     document.getElementById("answer").innerHTML = " ";
-     for(i=0;i<data2.length; i++) {
-      if(month == data2[i].month) {
+     for(i=0;i<data.length; i++) {
+      if(zip == data[i].Zip) {
      document.getElementById("answer").innerHTML += "<tr><td>" + data[i].Zip + "</td><td>" + data[i].month + "</td><td>" + data[i].unit + "</td><td>" + data[i].lat + "</td><td>" + data[i].long + "</td></tr>";
-     j=j+1;
      }
      }
 
-     document.getElementById("answer2").innerHTML = j;
 
      }
     
