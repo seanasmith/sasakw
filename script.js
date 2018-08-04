@@ -12,7 +12,7 @@ Plotly.d3.csv('CoA_publicart.csv', function(err, rows){
           lon: unpack(rows, 'Longitude'),
           text: unpack(rows,'Artwork Title'),
         marker: {
-            color: '#F00'
+            color: '#F22'
           }
       }];
   
@@ -28,7 +28,7 @@ Plotly.d3.csv('CoA_publicart.csv', function(err, rows){
             lon: -97.7431
           },
           zoom: 10, // Sets the zoom level.
-          style: 'light' // These are mapbox styles. Options include light, dark, satellite
+          style: 'satellite' // These are mapbox styles. Options include light, dark, satellite
         },
         margin: {
           r: 20,
