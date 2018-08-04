@@ -176,7 +176,7 @@ function drawBasic() {
             }
           };
 
-          var chart2 = new google.visualization.BarChart(document.getElementById('78702_div'));
+          var chart2 = new google.visualization.PieChart(document.getElementById('78702_div'));
 
           chart2.draw(data2, options2);
 
