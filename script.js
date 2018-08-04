@@ -1,6 +1,6 @@
 // MAP 
 
-/*Plotly.d3.csv('CoA_publicart.csv', function(err, rows){
+Plotly.d3.csv('CoA_publicart.csv', function(err, rows){
      
       function unpack(rows, key) {
           return rows.map(function(row) { return row[key]; });
@@ -47,7 +47,7 @@
       });
 
       Plotly.plot('mapviz', data, layout);
-});*/
+});
 
 
 /*
@@ -81,21 +81,140 @@ $(document).ready(function(){
 // Filter list
 
 
-    data = JSON.parse(data);
-    document.getElementById("form1").onchange = function() {
-    j=0;
+   data = JSON.parse(data);
 
-    zip = document.getElementById("thedropdown").value;
-    document.getElementById("answer").innerHTML = " ";
-     for(i=0;i<data.length; i++) {
-      if(zip == data[i].Zip) {
-     document.getElementById("answer").innerHTML += "<tr><td>" + data[i].Zip + "</td><td>" + data[i].month + "</td><td>" + data[i].unit + "</td><td>" + data[i].lat + "</td><td>" + data[i].long + "</td></tr>";
-     }
-     }
+  //filter
+
+   document.getElementById("form1").onchange = function() {
+
+   j=0;
+   zip = document.getElementById("thedropdown").value;
+   medium = document.getElementById('thedropdown2').value;
+
+   document.getElementById("answer").innerHTML = "";
+
+    for(i=0;i<data.length; i++) {
+
+    if (zip == data[i].zip && medium == 0) {
+    document.getElementById("answer").innerHTML += "<tr><td>" + data[i].title + "</td><td>" + data[i].Artist + "</td><td>" + data[i].medium + "</td><td>" + data[i].address + "</td><td>" + data[i].zip + "</td></tr>";
+    j=j+1;
+  } else if (zip == 0 && medium == data[i].medium) {
+    document.getElementById("answer").innerHTML += "<tr><td>" + data[i].title + "</td><td>" + data[i].Artist + "</td><td>" + data[i].medium + "</td><td>" + data[i].address + "</td><td>" + data[i].zip + "</td></tr>";
+    j=j+1;
+  } else if (zip == data[i].zip && medium == data[i].medium) {
+    document.getElementById("answer").innerHTML += "<tr><td>" + data[i].title + "</td><td>" + data[i].Artist + "</td><td>" + data[i].medium + "</td><td>" + data[i].address + "</td><td>" + data[i].zip + "</td></tr>";
+    j=j+1
+  }
+  }
+  document.getElementById("answer2").innerHTML = j;
+  }
 
 
-     }
-    
+//charts
+
+  //78701
+
+google.charts.load('current', {packages: ['corechart', 'bar']});
+google.charts.setOnLoadCallback(drawBasic);
+
+function drawBasic() {
+
+      var data = google.visualization.arrayToDataTable([
+        ['Medium', 'Pieces of Public Art',],
+        ['Sculpture', 62],
+        ['Print', 4],
+        ['Painting', 14],
+        ['Mosaic', 2],
+        ['Landscape', 1],
+        ['Drawing', 1],
+        ['Mixed Media', 23]
+      ]);
+
+      var options = {
+        title: '78701',
+        chartArea: {width: '50%'},
+        height: 300,
+        hAxis: {
+          title: 'Public art pieces',
+          minValue: 0
+        },
+        vAxis: {
+          title: 'Medium'
+        }
+      };
+
+      var chart = new google.visualization.BarChart(document.getElementById('78701_div'));
+
+      chart.draw(data, options);
+
+
+
+    //78702
+
+
+          var data2 = google.visualization.arrayToDataTable([
+            ['Medium', 'Pieces of Public Art',],
+            ['Sculpture', 43],
+            ['Print', 13],
+            ['Painting', 18],
+            ['Mosaic', 1],
+            ['Landscape', 3],
+            ['Drawing', 1],
+            ['Mixed Media', 5]
+          ]);
+
+          var options2 = {
+            title: '78702',
+            chartArea: {width: '50%'},
+            height: 300,
+            hAxis: {
+              title: 'Public art pieces',
+              minValue: 0
+            },
+            vAxis: {
+              title: 'Medium'
+            }
+          };
+
+          var chart2 = new google.visualization.BarChart(document.getElementById('78702_div'));
+
+          chart2.draw(data2, options2);
+
+
+    //78719
+
+    var data3 = google.visualization.arrayToDataTable([
+      ['Medium', 'Pieces of Public Art',],
+      ['Sculpture', 8],
+      ['Print', 7],
+      ['Painting', 6],
+      ['Mosaic', 0],
+      ['Landscape', 0],
+      ['Drawing', 0],
+      ['Mixed Media', 7]
+    ]);
+
+    var options3 = {
+      title: '78719',
+      chartArea: {width: '50%'},
+      height: 300,
+      hAxis: {
+        title: 'Public art pieces',
+        minValue: 0
+      },
+      vAxis: {
+        title: 'Medium'
+      }
+    };
+
+    var chart3 = new google.visualization.BarChart(document.getElementById('78719_div'));
+
+    chart3.draw(data3, options3);
+
+        }//close drawBasic
+
+
+
 
 
 

@@ -19,6 +19,7 @@ header {
   background-color: #000;
   height: 40px;
   position: fixed;
+  z-index: 5;
   top: 0;
   width: 100vw;
   display: flex;
@@ -27,7 +28,7 @@ header {
 }
 
 nav {
-  width: 300px;
+  width: 400px;
   margin-right: 3%;
 }
 
@@ -135,4 +136,17 @@ h3 {
 
 #art {
   height: 100vh;
+}
+
+#filter {
+  min-height: 50vh;
+}
+
+
+table {
+  margin: auto;
+}
+
+th, td {
+  text-align: left;
 }
