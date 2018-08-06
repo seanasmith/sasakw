@@ -143,6 +143,19 @@ h3 {
 }
 
 
+/*     #Charts       */
+
+#charts {
+  padding-top: 50px;
+}
+
+
+#agg_bar {
+  margin: auto;
+  width: 50%;
+}
+
+
 table {
   margin: auto;
 }
