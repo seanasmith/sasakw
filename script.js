@@ -120,8 +120,8 @@ google.charts.setOnLoadCallback(drawBasic);
 function drawBasic() {
 
       var data = google.visualization.arrayToDataTable([
-        ['Medium', 'Pieces of Public Art',],
-        ['Sculpture', 62],
+        ['Medium', 'Pieces of Public Art'],
+        ['Sculpture', 62]
         ['Print', 4],
         ['Painting', 14],
         ['Mosaic', 2],
@@ -143,7 +143,7 @@ function drawBasic() {
         }
       };
 
-      var chart = new google.visualization.BarChart(document.getElementById('78701_div'));
+      var chart = new google.visualization.Bar(document.getElementById('78701_div'));
 
       chart.draw(data, options);
 
@@ -153,7 +153,7 @@ function drawBasic() {
 
 
           var data2 = google.visualization.arrayToDataTable([
-            ['Medium', 'Pieces of Public Art',],
+            ['Medium', 'Pieces of Public Art'],
             ['Sculpture', 43],
             ['Print', 13],
             ['Painting', 18],
