@@ -109,13 +109,13 @@ $(document).ready(function(){
     for(i=0;i<data.length; i++) {
 
     if (zip == data[i].zip && medium == 0) {
-    document.getElementById("answer").innerHTML += "<tr><td><a href=''><img class='table_thumb' src='"  + data[i].image + "'/></a></td><td>" + data[i].title + "</td><td>" + data[i].Artist + "</td><td>" + data[i].medium + "</td><td>" + data[i].address + '</td><td>' + data[i].address + "</td><td>" + data[i].zip + "</td></tr>";
+    document.getElementById("answer").innerHTML += "<tr><td><img class='table_thumb' data-lightbox='thumbs' src='"  + data[i].image + "'/></td><td>" + data[i].title + "</td><td>" + data[i].Artist + "</td><td>" + data[i].medium + "</td><td>" + data[i].address + '</td><td>' + data[i].address + "</td><td>" + data[i].zip + "</td></tr>";
     j=j+1;
   } else if (zip == 0 && medium == data[i].medium) {
-    document.getElementById("answer").innerHTML += "<tr><td><a href=''><img class='table_thumb' src='"  + data[i].image + "'/></a></td><td>" + data[i].title + "</td><td>" + data[i].Artist + "</td><td>" + data[i].medium + "</td><td>" + data[i].address + '</td><td>' + data[i].address + "</td><td>" + data[i].zip + "</td></tr>";
+    document.getElementById("answer").innerHTML += "<tr><td><img class='table_thumb' data-lightbox='thumbs' src='"  + data[i].image + "'/></td><td>" + data[i].title + "</td><td>" + data[i].Artist + "</td><td>" + data[i].medium + "</td><td>" + data[i].address + '</td><td>' + data[i].address + "</td><td>" + data[i].zip + "</td></tr>";
     j=j+1;
   } else if (zip == data[i].zip && medium == data[i].medium) {
-     document.getElementById("answer").innerHTML += "<tr><td><a href=''><img class='table_thumb' src='"  + data[i].image + "'/></a></td><td>" + data[i].title + "</td><td>" + data[i].Artist + "</td><td>" + data[i].medium + "</td><td>" + data[i].address + '</td><td>' + data[i].address + "</td><td>" + data[i].zip + "</td></tr>";
+     document.getElementById("answer").innerHTML += "<tr><td><img class='table_thumb' data-lightbox='thumbs' src='"  + data[i].image + "'/></td><td>" + data[i].title + "</td><td>" + data[i].Artist + "</td><td>" + data[i].medium + "</td><td>" + data[i].address + '</td><td>' + data[i].address + "</td><td>" + data[i].zip + "</td></tr>";
     j=j+1
   }
   }
