@@ -166,5 +166,12 @@ th, td {
 
 .table_thumb {
   cursor: pointer;
-  width: 100px;
+  width: 200px;
+  position: static;
+  z-index: 5;
+}
+
+.table_thumb:hover {
+  width: 300px;
+  
 }
