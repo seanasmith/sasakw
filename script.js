@@ -179,7 +179,18 @@ function drawCurveTypes() {
 
 
 
+//popup 
 
+
+$(document).ready(function(){
+  $('.table_thumb').on('click', function(){
+    var image = this.attr();
+    
+    console.log(image);
+    
+    //$('#popup img').attr("src=",image);
+  });
+});
 
 
 

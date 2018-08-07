@@ -163,3 +163,8 @@ table {
 th, td {
   text-align: left;
 }
+
+.table_thumb {
+  cursor: pointer;
+  width: 100px;
+}
