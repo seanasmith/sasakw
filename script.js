@@ -28,7 +28,7 @@ Plotly.d3.csv('CoA_publicart.csv', function(err, rows){
             lon: -97.7431
           },
           zoom: 10, // Sets the zoom level.
-          style: 'satellite' // These are mapbox styles. Options include light, dark, satellite
+          style: 'light' // These are mapbox styles. Options include light, dark, satellite
         },
         margin: {
           r: 20,
