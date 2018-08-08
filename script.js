@@ -11,7 +11,7 @@ Plotly.d3.csv('CoA_publicart.csv', function(err, rows){
           lat: unpack(rows, 'Latitude'),
           lon: unpack(rows, 'Longitude'),
           text: unpack(rows,'Artwork Title'),
-        marker: {
+          marker: {
             color: '#F22'
           }
       }];
