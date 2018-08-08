@@ -72,12 +72,13 @@ nav ul li a:hover {
 */
 
 #top {
-  background-image: url(https://cdn.glitch.com/76b5de22-574e-436a-b573-9655690c67f8%2Ftexas-3409985_1280.jpg?1533088282665);
+  background-image: url(https://cdn.glitch.com/76b5de22-574e-436a-b573-9655690c67f8%2F1.JPG?1533743976013);
   height: 100vh;
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
+  background-size:cover;
 }
 
 h1 {
