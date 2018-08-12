@@ -1,134 +1,208 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    
+
     <title>Austin Public Art</title>
-    
+
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    
-    <link rel="stylesheet" href="/style.css">
-    
+
+    <link rel="stylesheet" href="style.css">
+
     <script src="https://code.jquery.com/jquery-3.3.1.min.js" defer></script><!-- jQuery -->
-    <script src="https://cdn.glitch.com/501b06a0-c0b9-4444-bc44-327800ab4479%2Fplotly-latest.min.js?1521484933194"></script>
-    
-    
+<script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+
     <script src="data2.json"></script>
     <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
-    <script src="/script.js" defer></script>
-    
-  </head>  
-  
+    <script src="script.js" defer></script>
+
+  </head>
+
   <body>
-    
-    
-    
+
+<!--
+
+    Redo math on aggregate charts according to new csv
+
+    style everything...duh
+
+ -->
+
     <header>
       <nav>
         <ul>
           <li><a href="#top">Top</a></li>
           <li><a href="#intro">Intro</a></li>
-          <li><a href="#charts">Charts</a></li>
-          <li><a href="#artists">The Artist</a></li>
-          <li><a href="#art">Map</a></li>
-          <li><a href="#filter">Filter</a></li>
+          <li><a href="#history">History</a></li>
+          <li><a href="#judd">Judd Graham</a></li>
+          <li><a href="#map">Map</a></li>
+          <li><a href="#filter">Explore</a></li>
         </ul>
       </nav>
     </header>
-    
+
     <div class="container">
-      
+
       <div id="top">
 
-        <h1>Yep...</h1>
-        <h3>This is a thing we did</h3>
-        
+        <h1>Keeping Austin Weird</h1>
+        <h3>When and how art in Austin spilled out of museums and onto the streets</h3>
+
       </div><!-- #top -->
 
       <div id="intro">
-        
-        <p id="lead-graph"><span id="dropcap1">A</span>rt lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus a tortor quam. Sed ipsum magna, mollis at ex in, suscipit ornare mauris. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Maecenas tincidunt tempor ligula, a ultrices ante eleifend et. Ut placerat tincidunt justo sit amet rhoncus. Fusce scelerisque tempor commodo. Aenean eu consequat enim, quis efficitur libero. Nullam ac urna sed sapien elementum ullamcorper.</p>
 
-        <p>Phasellus tristique mollis tristique. Duis in bibendum nulla, egestas ullamcorper erat. Phasellus in orci in urna mattis venenatis. Nullam lacus mi, iaculis et porta in, gravida ut urna. In hac habitasse platea dictumst. Integer in consequat odio. Nam tincidunt dictum auctor. Sed sagittis maximus sem ut feugiat.</p>
+        <p id="lead-graph"><span id="dropcap1">A</span>ustin has long been argued as a <a href="https://www.mystatesman.com/lifestyles/austin-the-1970s-set-the-stage-for-austin-the-2010s/s51QyaU97zQ85WVNHad7bK/" target="_blank">pocket of hippie liberals</a> deep in the often-stereotype state of Texas. And while its quirkiness compared to Texas&apos; other major metropolitan areas allows it to stand out, its popularity and recent boom have <a href="https://www.huffingtonpost.com/entry/east-austin-gentrification_us_5acb331be4b07a3485e6637a" target="_blank"> raised issues of gentrification</a> and a loss of that original &quot;Keep Austin Weird&quot; mission.</p>
 
-        <p>Mauris eget tellus commodo, sollicitudin lectus non, ultricies nibh. Praesent at blandit urna. Proin non neque faucibus, convallis lectus eu, pretium quam. In imperdiet sem purus, a accumsan libero rhoncus ut. Fusce fringilla convallis tortor, in congue mauris dignissim vel. Vivamus et mi varius, mattis nulla ut, egestas purus. Donec rhoncus ex massa, vitae dignissim massa convallis at.</p>
+        <p>For better or worse, however, Austin&apos;s growth over the past three decades, and most notably the past few years, can be seen through it&apos;s dedication to public art throughout the city. What was perhaps once bestowed to solely to museums and galleries has now spilled into the streets, parks and public buildings throughout the city.</p>
 
-        <p>Nam facilisis magna dui, in faucibus odio lobortis vitae. Phasellus ac nisl euismod, tempus lacus ut, venenatis dolor. Fusce sed erat id libero dapibus laoreet vitae quis risus. Cras sit amet lectus turpis. Vestibulum nec velit sed quam pulvinar luctus ut non nulla. Etiam dignissim malesuada diam pulvinar fringilla. Curabitur bibendum nisi nunc, a pretium risus tincidunt quis. Suspendisse in elit cursus magna feugiat accumsan. Interdum et malesuada fames ac ante ipsum primis in faucibus. Donec vulputate vitae enim at hendrerit. Maecenas sed risus fringilla, pretium nibh vel, commodo velit. Nam vel ante turpis. Nunc sodales ante a quam commodo, vel rutrum massa luctus. Ut mollis bibendum ante, et sollicitudin augue imperdiet ut. Praesent luctus ac eros et ultrices.</p>
+        <blockquote>&quot;You can never imagine the many different ways people will interpret or interact with your work ... there's freedom that comes from that thought.&quot; - <a href="https://www.austinchronicle.com/arts/2018-02-02/snapshot-austins-large-scale-public-art/" target="_blank">Jose Parla to the Ausitin Chronicle</a>
+        </blockquote>
 
-      </div><!-- #intro --> 
-      
-      <div id="charts">
-        
-        <div id="agg_bar"></div>
-        <div id="agg_line"></div>
-        
+        <p>Austin&apos;s public art, while heavily centered in the downtown area, is spread throughout the city, with pieces as far out as #############.</p>
+
+        <div id="image_holder">
+          <img src="img/intro.jpeg" />
+        </div>
+
+        <p>With nearly 300 pieces and more than 100 artists dotting the city&apos;s public art scene, a plethora of media, styles and topics can be explored without having to set foot in a museum. Learn the history behind the public arts movement in Austin, hear from one local artist who has nearly a dozen peices in the city and explore the art yourself below.</p>
+
+      </div><!-- #intro -->
+
+      <div id="history">
+
+
+
+        <div class="history_mod_LR">
+
+          <div>
+            <div>
+            <h3>1938</h3>
+            </div>
+            <p>The first recorded piece of public art in Austin is Hugo Villa&apos;s &quot;Memorial to the Great Builders of Texas,&quot; which was installed in 1938. The city's <a href="https://www.austintexas.gov/sites/default/files/files/Planning/Demographics/population_history_pub.pdf" target="_blank">population was just more than 87,000 in 1940</a>, equivalent to <a href="http://www.city-data.com/city/Sugar-Land-Texas.html" target="_blank">the current population of Sugar Land</a>, a suburb southwest of Houston.</p>
+          </div>
+
+          <img id="texas" src="img/texas.jpg"/>
+
+        </div><!-- .history_mod-->
+
+        <div class="history_mod">
+
+          <div>
+            <h3>1985</h3>
+          </div>
+
+          <p>Growth of public art was slow for much of the 1900s till the <a href="http://www.austintexas.gov/department/art-in-public-places" tarteg="_blank">Art In Public Places initiative was created in 1985</a>. A notable spike in pieces can be seen after the program&apos;s implementation with some years seeing more than 30 pieces added throughout the city.</p>
+
+
+
+          <div id="agg_line"></div>
+
+
+        </div><!-- .history_mod -->
+
+        <div class="history_mod">
+
+          <div>
+            <h3>Today</h3>
+          </div>
+
+          <p>Austin's public art is, however, cenrralized around the downtonw area. The top three zipcodes in terms of the number of art pieces all share this central location. Sculptures dominate as the most common medium.</p>
+
+          <div id="agg_bar"></div>
+
+        </div>
+      </div><!-- .history_mod -->
+
+    </div><!-- #history -->
+
+      <div id="judd">
+
+        <h2>Austin artist&apos;s stamp on his city</h2>
+
+        <p><span id="dropcap2">J</span>udd Graham is one of many Austin artist commissioned to create art to be showcased across the city of Austin as a part of Austin's public art initiative. His pieces, Spin and Arrays #1-9, are positioned outside the new Austin Central Library downtown. The style of these pieces blend in well with their surroundings, although once they are noticed, people are immediately drawn to them. When viewed up close, the viewer can observe just how many unique divots and patterns are involved in each one of Graham's pieces. While all of the pieces are uniform, no two are exactly alike, and that's what attracts people to them.</p>
+
+        <div>
+          <img src="img/judd.jpeg" />
+        </div>
+
+        <p>Spin is a kinetic sculpture that encourages people passing by to spin each of its three sections. Made from hand-forged mild steel and uniquely texturized, children and adults can feel the different patterns of the sculpture as they spin it in different directions. Graham says it was originally intended to give children getting off of school buses something to do so they would all stay in one place, and the teachers wouldn't have to worry about the children running off. Arrays #1-9 are a series of sculptures that line the outside of the library. These mimic the shape of Spin, and serve as covers for bollards that separate pedestrians and vehicles passing through the area. The contract for these pieces was signed in 2014, before the library was even built, and in 2017 the pieces were officially installed. Together the sculptures took around 500 hours to make.</p>
+
+        <blockquote>"My inspiration came from nature…[the sculpture] looked like a rock formation that had a bunch of facets I really liked. It created really nice texture and when light shines on it and produces sparkles from all the facets."</blockquote><!-- #<blockquote -->
+
+        <p>Graham was able to showcase these pieces through a call for art that the city of Austin announced. Originally the city of Austin only asked for the bollard covers. While Graham agreed, he also made suggestions as to what type of artwork could accompany the bollard covers. It was then that Spin was ideated.</p>
+
+        <p>Before Graham got his start as an artist in Austin, he received his Bachelor of Fine Arts in sculpture with a minor in industrial technology from the <a href="https://art.unt.edu/studio-art/sculpture">University of North Texas</a>, and after graduating he began working at a furniture design store. After working for them for a while, he became a designer for them until the company eventually went out of business. After that business closed, Graham continued his creations by starting his own company in 1996, <a href="https://www.220designs.com/">220 Designs</a>, and built a studio on his property in Manchaca, Texas. In his studio, Graham is able to make all of his creative ideas come to life, including many commercial pieces that can be seen around Austin. Various pieces are arranged throughout his home and studio, showcasing some of his favorite pieces to accent his property.</p>
+
+        <p>Graham also has other ideas in the works for the city of Austin, and he is first starting with Butler Park. Approved almost ten years ago, Graham will be constructing giant metal ants for children to play on once Butler Park's expansion is complete. He says that this idea stemmed from, "an alliance in central Austin that banded together as a bunch of neighborhood people to keep condos from being built on Auditorium Shores in the 80's." With the expansion of Butler Park in the near future, one could call their alliance a massive success in keeping Austin full of green space and full of a variety of art from an array of different artists.</p>
+
+        <p>Head over to the <a href="https://www.youtube.com/watch?v=Y1BvpJnU544">city of Austin's YouTube Channel</a> to see a time lapse of Graham's creative process.</p>
+
+          <!--Video interview:-->
+        <div style="margin:auto;width:60%;"><iframe src="https://www.youtube.com/embed/GMn20oiwSOI?ecver=2" width="640" height="360" frameborder="0" allow="autoplay; encrypted-media" style="width:100%;margin:auto;left:0" allowfullscreen></iframe></div>
+
+
+      </div><!-- #judd -->
+
+
+
+      <div id="map">
+        <h3>Find art near you:</h3>
+        <div id="mapviz"> </div>
+      </div><!-- #map -->
+
+
+
+
+      <div id="filter">
+        <h3>Explore Austin&apos;s Art:</h3>
+
+        <div id="forms">
+        <form id="form1">
+          <select id="thedropdown">
+            <option value="0">Choose Zip:</option>
+            <option value="78701">78701</option>
+            <option value="78702">78702</option>
+            <option value="78703">78703</option>
+            <option value="78704">78704</option>
+            <option value="78705">78705</option>
+            <option value="78719">78719</option>
+            <option value="78721">78721</option>
+            <option value="78722">78722</option>
+            <option value="78723">78723</option>
+            <option value="78741">78741</option>
+            <option value="78744">78744</option>
+            <option value="78745">78745</option>
+            <option value="78746">78746</option>
+            <option value="78751">78751</option>
+            <option value="78752">78752</option>
+            <option value="78753">78753</option>
+            <option value="78754">78754</option>
+            <option value="78756">78756</option>
+            <option value="78757">78757</option>
+            <option value="78758">78758</option>
+            <option value="78759">78759</option>
+          </select>
+
+          <select id="thedropdown2">
+            <option value="0">Choose Medium:</option>
+            <option value="Sculpture">Sculpture</option>
+            <option value="Print">Print</option>
+            <option value="Painting">Painting</option>
+            <option value="Mosaic">Mosaic</option>
+            <option value="Landscape">Landscape</option>
+            <option value="Drawing">Drawing</option>
+            <option value="Mixed Media">Mixed Media</option>
+            <option value="Misc">Misc</option>
+          </select>
+        </form>
       </div>
 
-      <div id="artists">
-
-      </div><!-- #artists --> 
-
-      <div id="art">
-        
-
-        <div id="mapviz"> </div>
-
-      </div><!-- #art -->
-      
-      <div id="filter">
-        
-        <form id="form1">
-      <select id="thedropdown">
-        <option value="0">Choose Zip:</option>
-        <option value="78701">78701</option>
-        <option value="78702">78702</option>
-        <option value="78703">78703</option>
-        <option value="78704">78704</option>
-        <option value="78705">78705</option>
-        <option value="78719">78719</option>
-        <option value="78721">78721</option>
-        <option value="78722">78722</option>
-        <option value="78723">78723</option>
-        <option value="78724">78724</option>
-        <option value="78727">78727</option>
-        <option value="78730">78730</option>
-        <option value="78738">78738</option>
-        <option value="78739">78739</option>
-        <option value="78741">78741</option>
-        <option value="78744">78744</option>
-        <option value="78745">78745</option>
-        <option value="78746">78746</option>
-        <option value="78748">78748</option>
-        <option value="78749">78749</option>
-        <option value="78750">78750</option>
-        <option value="78751">78751</option>
-        <option value="78752">78752</option>
-        <option value="78753">78753</option>
-        <option value="78754">78754</option>
-        <option value="78756">78756</option>
-        <option value="78757">78757</option>
-        <option value="78758">78758</option>
-        <option value="78759">78759</option>
-      </select>
-
-      <select id="thedropdown2">
-        <option value="0">Choose Medium:</option>
-        <option value="Sculpture">Sculpture</option>
-        <option value="Print">Print</option>
-        <option value="Painting">Painting</option>
-        <option value="Mosaic">Mosaic</option>
-        <option value="Landscape">Landscape</option>
-        <option value="Drawing">Drawing</option>
-        <option value="Mixed media">Mixed Media</option>
-        <option value="Miscellaneous">Misc</option>
-      </select>
-    </form>
-
-    <p id="answer2">
+    <p id="count">Selected pieces: <span id="answer2">0</span>
     </p>
 
-    <table width="80%">
+    <table>
 
       <thead>
         <th>Image</th>
@@ -144,16 +218,12 @@
       </tbody>
 
     </table>
-        
-        <div id="popup">
-          <img src="#"><!-- fill with clicked thumbnail image, fullsize -->
-        </div>
-        
-        
-      </div>
+
+
+  </div><!-- #filter -->
 
     </div><!-- .container -->
-    
-    
+
+
   </body>
 </html>
